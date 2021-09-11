@@ -5,7 +5,17 @@
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.87); }
 
+html {
+  height : 100vh;
+  min-width : 400px;
+}
+
+body {
+  height: 100%;
+}
+
 main {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +24,9 @@ main {
 .nav-container {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   height: 3.75rem;
-  align-items: center;
-  justify-content: center; }
+  align-items: center;}
 
 .nav-elements {
   width: 100%;
@@ -31,6 +40,7 @@ main {
   padding-right: 1rem; }
 
 .logo-container {
+  height: calc(100% - 560px);
   width: 100%;
   display: flex;
   align-items: center;
