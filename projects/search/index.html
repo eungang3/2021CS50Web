@@ -5,44 +5,47 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-      <main>
         <nav class="nav-container">
-          <div class="nav-elements">
-            <a class="element">
-              Google Image Search
-            </a>
-            <a class="element">
-              Google Advanced Search
-            </a>
-          </div>
+            <div class="nav-elements">
+                <a class="element">
+                    Image 
+                </a>
+                <a class="element">
+                    Advanced 
+                </a>
+            </div>
         </nav>
+        <main>
+            <div class="logo-container">
+                <div class="logo">
+                    <img class="logo-img" src="https://www.google.co.kr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+                </div>
+            </div>
 
-        <div class="logo-container">
-          <div class="logo">
-            <img src="https://www.google.co.kr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
-          </div>
-        </div>
+            <div class="search-container">
+                <form action="https://www.google.com/search">
+                    <div class="bar-container">
+                        <span class="icon-container">
+                             <svg viewBox="0 0 24 24">
+                                 <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                             </svg>
+                        </span>
+                            <div class="text-input-container">
+                                <input class="search" type="text" name="q">
+                            </div>
+                    </div>
+                    <div class="buttons-container">
+                        <input type="submit" name="btnK" value="Google Search">
+                        <input type="submit" name="btnI" value="I'm Feeling Lucky">
+                    </div>
+                    <div>
+                        <input name="iflsig" type="hidden">
+                    </div>
+                </form>
+            </div>
+            <div class="footer">
 
-        <div class="search-container">
-          <form>
-            <div class="bar-container">
-              <div class="icon-container">
-                <span>
-                  <svg>
-                    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                  <svg>
-                </span>
-              </div>
             </div>
-            <div class="text-input-container">
-              <input type="text" name="q">
-            </div>
-            <div class="buttons-container">
-              <input type="submit" name="btnK" value="Google Search">
-              <input type="submit" name="btnI" value="I'm Feeling Lucky">
-            </div>
-          </form>
-        </div>
-      </main>
+        </main>
     </body>
 </html>
