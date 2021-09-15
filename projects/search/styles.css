@@ -9,22 +9,22 @@
 }
 
 html {
-    max-height: 100vh;
     height: 100%;
+    width: 100%;
 }
 
 body {
     height: 100%;
+    width: 100%;
     min-width: 400px;
 }
 
 .default-main {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-container {
@@ -34,6 +34,10 @@ body {
   height: 3.75rem;
   align-items: center;
   justify-content: center;
+}
+
+.footer {
+    flex-grow: 1;
 }
 
 .nav-elements {
@@ -62,17 +66,21 @@ body {
     text-decoration: underline;
 }
 
-.nav-elements > a:first-child {
+.element.toplogo {
     padding-left: 1rem;
     margin-right: auto;
 }
 
 .logo-container {
-  height: calc(100% - 560px);
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center; }
+    height: calc(100% - 560px);
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    min-height: 92px;
+    flex-shrink: 0;
+    max-height: 290px;
+    justify-content: center;
+}
 
 .logo {
   display: flex;
@@ -102,6 +110,7 @@ form {
     min-width: 584px;
     border-radius: 24px;
     padding: 0 8px 0 14px;
+    margin-top: 6px;
 }
 
  .bar-container:hover {
@@ -165,10 +174,6 @@ svg {
     background-color: #f8f9fa;
     border: 1px solid #dadce0;
     color: #202124;
-}
-
-.footer {
-    flex-grow : 1;
 }
 
 .appbar {
