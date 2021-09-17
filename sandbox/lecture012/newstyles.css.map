@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACP,WAAW,EAAG,KAAK;EACnB,SAAS,EAAG,IAAI;EAChB,MAAM,EAAG,SAAS;;AAGpB,QAAS;EAEP,gBAAgB,EAAG,KAAK;EACxB,SAAS,EAAG,IAAI",
+"sources": ["newstyles.scss"],
+"names": [],
+"file": "newstyles.css"
+}

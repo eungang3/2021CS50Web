@@ -1,0 +1,29 @@
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+#forma {
+  color: green;
+}
+
+button {
+  color: red;
+}
+
+button:hover {
+  color : black;
+}
+
+#container {
+  border : solid;
+  display : grid;
+  grid-template-rows : 1fr 2fr;
+  grid-template-columns : 400px 400px auto;
+
+}
+
+#container div {
+  width: 100%;
+  border : solid;
+}

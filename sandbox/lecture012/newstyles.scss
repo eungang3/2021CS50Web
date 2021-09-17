@@ -1,0 +1,11 @@
+%message {
+  font-family : serif;
+  font-size : 18px;
+  border : 1px solid;
+}
+
+.success {
+  @extend %message;
+  background-color : green;
+  font-size : 30px;
+}
