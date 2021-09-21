@@ -13,7 +13,7 @@ h1 {
 }
 
 textarea {
-    height: 90vh;
+    height: 50vh;
     width: 80%;
 }
 
@@ -42,12 +42,18 @@ form {
     flex-direction: column;
 }
 
-input[type="submit"]{
+.title{
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.submit{
+    margin-top: 0.5rem;
     height: 2rem;
     width: 12rem;
 }
 
-button[type="submit"]{
+.search_submit{
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     border : 1px solid;
