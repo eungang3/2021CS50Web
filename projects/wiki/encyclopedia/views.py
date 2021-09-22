@@ -11,6 +11,9 @@ class NewEntryForm(forms.Form):
     title = forms.CharField(label="title", widget=forms.TextInput(attrs={'placeholder': 'Enter title', 'class':'title'}))
     content = forms.CharField(widget=forms.Textarea(attrs={'placeholder':'Enter contents', 'class':'content'}), label="content")
 
+class EditEntryForm(forms.Form):
+    content = forms.CharField(widget=forms.Textarea(attrs={'class':'content'}))
+
 def index(request):
     return render(request, "encyclopedia/index.html", {
         "entries": util.list_entries()
@@ -74,20 +77,19 @@ def get_random(request):
 
 def edit(request, title):
     if request.method == "POST":
-        form = NewEntryForm(request.POST)
+        form = EditEntryForm(request.POST)
         if form.is_valid():
-            title = form.cleaned_data["title"]
             content = form.cleaned_data["content"]
             util.save_entry(title, content)
-            return HttpResponseRedirect(reverse("encyclopedia:index"))
+            return redirect('encyclopedia:entry', title=f'{title}')
         else:
             return render(request,"encyclopedia/error.html", {
-                'message' : 'An error occured. Try again.'
+            'message' : 'An error occured. Try again.'
             })
 
     content = util.get_entry(title)
     return render(request, "encyclopedia/edit.html", {
-        "form" : NewEntryForm({'title' : f'{title}', 'content': f'{content}'}),
+        "form" : EditEntryForm({'content': f'{content}'}),
         "content" : content,
         "title" : title
     })

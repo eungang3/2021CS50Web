@@ -6,9 +6,10 @@
 
 {% block body %}
 <h1>Edit {{ title }}</h1>
-<form action="/edit/{{ title|safe }}" method="POST">
+<form action="/edit/{{ title|safe }}" method="post">
     {% csrf_token %}
-    {{ form.content }}
+    {{ form }}
+    <input type="submit" value="submit" class="submit">
 </form>
-<input type="submit" value="submit" class="submit">
+
 {% endblock %}
