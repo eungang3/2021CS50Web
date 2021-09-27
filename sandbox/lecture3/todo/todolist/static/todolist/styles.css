@@ -91,10 +91,26 @@ a:hover {
     background-color: rgba(255, 46, 46, 1);
     color : white;
     border-radius: 3px;
-    height: 1.5rem;
+    height: 2rem;
     width: 5rem;
+    cursor: pointer;
+}
+
+.addform {
+    display: flex;
+    flex-direction: row;
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 50%;
+    height: 2rem;
+    border: 0;
+    border-bottom: 1px solid;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    flex-grow : 1;
+}
+
+.add-main {
+    height: 20%;
 }
