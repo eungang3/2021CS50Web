@@ -1,0 +1,20 @@
+{% extends "todolist/layout.html" %}
+
+{% block title %}
+<title>할 일 추가하기</title>
+{% endblock %}
+
+{% block body %}
+<main class="add-main">
+    <div class="title title-p">
+        <p class="title-p">할 일 추가하기</p>
+    </div>
+    <div class="tasks">
+        <form action="" method="POST" class="addform">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="button-add">추가</button>
+        </form>
+    </div>
+</main>
+{% endblock %}
