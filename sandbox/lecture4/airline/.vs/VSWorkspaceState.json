@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\airline",
+    "\\flights",
+    "\\flights\\templates",
+    "\\flights\\templates\\flights",
+    "\\users",
+    "\\users\\templates",
+    "\\users\\templates\\users"
+  ],
+  "SelectedNode": "\\users\\templates\\users\\user.html",
+  "PreviewInSolutionExplorer": false
+}
