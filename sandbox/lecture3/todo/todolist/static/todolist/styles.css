@@ -115,6 +115,5 @@ input[type="text"] {
     height: 20%;
     min-height: 15rem;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
