@@ -3,24 +3,64 @@
     <head>
         <title>Single Page</title>
         <style>
-            div {
-                display: none;
-            }
         </style>
-        <script src="singlepage.js"></script>
+        <script>
+            /* single page with the same url
+            // Shows given section
+            function showSection(section) {
+                
+                // Find section text from server
+                fetch(`/single/sections/${section}`)
+                .then(response => response.text())
+                .then(text => {
+                    // Log text and display on page
+                    console.log(text);
+                    document.querySelector('#content').innerHTML = text;
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                // Add button functionality
+                document.querySelectorAll('button').forEach(button => {
+                    button.onclick = function() {
+                        showSection(this.dataset.section);
+                    };
+                });
+            });
+            */
+
+            window.onpopstate = function(event) {
+                console.log(event.state.section);
+                showSection(event.state.section);
+            }
+
+            function showSection(section) {
+                fetch(`/single/sections/${section}`)
+                .then(response => response.text())
+                .then(text => {
+                    console.log(text);
+                    document.querySelector('#content').innerHTML = text;
+                })
+            }
+
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelectorAll('button').forEach(button => {
+                    button.onclick = function() {
+                        const section = this.dataset.section;
+
+                        history.pushState({section: section}, "", `section${section}`);
+                        showSection(section);
+                    }
+                })
+            })
+        </script>
     </head>
     <body>
-        <button data-page="page1">Page 1</button>
-        <button data-page="page2">Page 2</button>
-        <button data-page="page3">Page 3</button>
-        <div id="page1">
-            <h1>This is page 1</h1>
-        </div>
-        <div id="page2">
-            <h1>This is page 2</h1>
-        </div>
-        <div id="page3">
-            <h1>This is page 3</h1>
+        <h1>Hello!</h1>
+        <button data-section="1">Section 1</button>
+        <button data-section="2">Section 2</button>
+        <button data-section="3">Section 3</button>
+        <div id="content">
         </div>
     </body>
 </html>
