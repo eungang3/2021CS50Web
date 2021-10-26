@@ -12,3 +12,6 @@ def section(request, num):
         return HttpResponse(texts[num - 1])
     else:
         raise Http404("No such section")
+
+def scroll(request):
+    return render(request, 'single/scroll.html')        
