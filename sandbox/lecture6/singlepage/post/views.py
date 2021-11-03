@@ -7,4 +7,4 @@ def index(request):
     return render(request, "post/index.html")
 
 def posts(request):
-    
+    return render(request, )
